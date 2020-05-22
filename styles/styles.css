@@ -9,63 +9,106 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  html{
+    background-image: url(/images/fondoNegro1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  body {
+    background-color: #000000;
+    display: grid;
+    margin: 0vh 12vh;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr auto;
+    grid-template-areas:
+      "  navbar "
+      " linea "
+      " main "
+      " linea2 "
+      " footer ";
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: #b20000;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    animation: slideInDown;
+    animation-duration: 1s;
+  }
+
+  .logo{
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  .linksBar{
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;    
+      align-items: center;  
+  }
+
+  .linksBar li{
+    height: 10VH;
+    list-style: none;
+    
+  }
+
+  .linksBar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'molot';
 }
 
-html {
-  background-image: url(/images/fondoNegro1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  .linksBar a:hover{
+    background-color: #000000;
+    color: #b20000;
+    transition: color 0.2s ease-in-out;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-  background-color: #000000;
-  display: grid;
-  margin: 0vh 12vh;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr auto;
-  grid-template-areas:
-    "  navbar "
-    " linea "
-    " main "
-    " linea2 "
-    " footer ";
-}
+  .linkBar li a{
+    background-color: #000000;
+    display: block;
+  }
 
-.navbar {
-  grid-area: navbar;
-  background-color: #b20000;
-  height: 10vh;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr;
-  animation: slideInDown;
-  animation-duration: 1s;
-}
+  .boxdepleglable{
+    display: none;
+    background-color: #000000;
+  }
 
-.content {
-  animation: fadeIn;
-  animation-duration: 3s;
-}
+  .linkBar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 200px;
+  }
 
-.logo {
-  background-image: url(/images/logocrosspage.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  left: 30px;
-  top: 5px;
-  animation: fadeInDown;
-  animation-duration: 1.5s;
-}
+  li ul a{
+    background-color: #000000;
+    height: 150px;
+  }
 
-.linksBar {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+  a .linkBar{
+      text-decoration: none;
+      height: inherit;
+      width: inherit;
+  }
 
 .linkBar1 {
   animation: slideInDown;
@@ -81,6 +124,7 @@ body {
   animation: slideInDown;
   animation-duration: 3s;
 }
+
 .linksBar a {
   display: flex;
   justify-content: center;
@@ -110,6 +154,156 @@ a .linkBar {
   -webkit-transition: color 0.2s ease-in-out;
 }
 
+  .linea {
+    grid-area: linea;
+    background-color: #fff;
+    color: #b20000;
+    font-family: 'molot';
+    text-align: right;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+  }
+  
+  .linea2 {
+    grid-area: linea2;
+    background-color: #fff;
+    color: #b20000;
+    font-family: 'molot';
+    text-align: left;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+  }
+
+  .main {
+    grid-area: main;
+    height: 70vh;
+    background-image: url(/images/ban3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x:  center;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .conta{
+      position: relative;
+      right: 500px;
+      height: 300px;
+      width: 300px;
+      background-color: #b2000080;
+  }
+
+  .contb{
+      position: relative;
+      left: 20px;
+      top: 20px;
+      height: 300px;
+      width: 300px;
+      background-color: #000000;
+      color: white;
+      font-family: molot;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contacto{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-image: url(/images/danger.png);
+    height: 10vh;
+  }
+
+  .danger{
+    background-image: url(/images/danger.png);
+    height: inherit;
+    width: 85%;
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+
+  .formulario{
+   background-color: #000000;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .correo{
+    width: 211px;
+  }
+
+
+  .btn{
+    width: 211px;
+    border-radius: 3px;
+    background-color: #b20000;
+    color: white;
+    border: #000000 1px solid;
+  }
+
+  .varios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'redes',
+    'maps',
+    'llamanos'
+    ;
+    height: 10vh;
+    background-color: black;
+    color: #fff;
+    font-family: molot;
+  }
+
+  .redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    flex-direction: column;
+    letter-spacing: 1px;
+    border-right: #b20000 1px solid;
+    
+  }
+
+  .redes .fab{
+    font-size: 1.4em;
+    color: #ffffff;
+    
+  }
+
+  .maps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-right: #b20000 1px solid;
+  }
+
+  .llamanos{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+  .drop{
+    position: relative;
+    
+  }
 .linea {
   grid-area: linea;
   background-color: #fff;

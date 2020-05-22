@@ -16,21 +16,35 @@
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <div class="logo"></div>
-        <nav class="linksBar">
-          <a class="linkBar1" href="#">Nuestro Box</a>
-          <a class="linkBar2" href="#">Nutricion</a>
-          <a class="linkBar3" href="#">Crosfit?</a>
-        </nav>
-      </div>
-    </header>
-    <div class="content">
-      <div class="linea">
-        <p>El mejor box de colombia</p>
-      </div>
-      <div class="main">
-        <div class="video">
+        <div class="navbar">
+            <div class="logo"> 
+              <img src="/images/logocrosspage.png" height="70vh" alt="">
+            </div>
+            <ul class="linksBar">
+                <li><a class="linkBar linkBar1" id="btn1" href="#">Nuestro Box</a>
+                    <ul class="boxdepleglable" id="box1">
+                        <a class="link"  href="#">Quienes somos</a>
+                        <a class="link" href="#">Instalaciones</a>
+                        <a class="link" href="#">Servicios</a>
+                        <a class="link" href="#">Galeria</a>
+                    </ul>
+                </li>
+                <li><a class="linkBar linkBar2" href="#">Nutricion</a></li>
+                <li><a class="linkBar linkBar3" href="#">Crosfit</a>
+                    <ul class="boxdepleglable" >
+                        <a class="linkBar" href="#">Que es Crosfit</a>
+                        <a class="linkBar" href="#">Jerga Crosfit</a>
+                        <a class="linkBar" href="#">FAQ</a>
+                        <a class="linkBar" href="#">Links</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="linea">
+            <p>El mejor box de colombia</p>
+        </div>
+        <div class="main" id="main">
+          <div class="video">
           <video
             autoplay
             muted
@@ -43,18 +57,43 @@
           </video>
         </div>
 
-        <!-- <div class="conta">
-          <div class="contb">
-            <h1>EL DOLOR ES TEMPORAL, LA GANANCIA ES PARA SIEMPRE.</h1>
-          </div> -->
-      </div>
-      <div class="linea2">
-        <p>a</p>
-      </div>
-      <div class="footer">
-        <div id="map"></div>
-      </div>
-    </div>
+            <div class="conta">
+                <div class="contb">
+                    <h1>El dolor es temporal, pero el orgullo ese es para siempre</h1>
+                </div>
+            </div>
+        </div>
+        <div class="linea2">
+            <p>Hubicados en Zipaquira</p>
+        </div>
+        <div class="footer">
+            <div class="contacto"> 
+                <div class="danger"></div>                
+               <div class="formulario">
+                    <h2>Mas informacion?</h2>
+                    <h2> dejanos tu email</h2>
+                    <input type="text" class="correo">
+                    <input type="submit" value="recibir info" class="btn">
+               </div>
+            </div>
+            <div class="varios">
+                <div class="redes">
+                    <h1>Nuestras redes</h1>
+                    <div>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                        <a href=""><i class="fab fa-instagram-square"></i></div></a>
+                     </div>
+                 <div id="map"></div>
+                <div class="llamanos"> 
+                    <form action="">
+                        <a> Contacto</a>
+                        <a> 310 218 2024</a>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright"></div>
+        </div>
   </body>
   <script src="/scripts/scripts.js"></script>
   <script>
