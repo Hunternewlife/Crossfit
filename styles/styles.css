@@ -1,146 +1,163 @@
-@font-face{
-    font-family: molot;
-    src: url(/styles/fonts/molot.otf);
+@font-face {
+  font-family: molot;
+  src: url(/styles/fonts/molot.otf);
 }
 
-@font-face{
-    font-family: mara;
-    src: url(/styles/fonts/mara.ttf);
+@font-face {
+  font-family: mara;
+  src: url(/styles/fonts/mara.ttf);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  html{
-    background-image: url(/images/fondoNegro1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  body {
-    background-color: #000000;
-    display: grid;
-    margin: 0vh 12vh;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr 0.4fr;
-    grid-template-areas:
-      "  navbar "
-      " linea "
-      " main "
-      " linea2 "
-      " footer ";
-  }
-  
-  .navbar {
-    grid-area: navbar;
-    background-color: #b20000;
-    height: 10vh;
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-  }
+html {
+  background-image: url(/images/fondoNegro1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  .logo{
-      background-image: url(/images/logocrosspage.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: relative;
-      left: 30px;
-      top: 5px;
-  }
+body {
+  background-color: #000000;
+  display: grid;
+  margin: 0vh 12vh;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr 0.4fr;
+  grid-template-areas:
+    "  navbar "
+    " linea "
+    " main "
+    " linea2 "
+    " footer ";
+}
 
-  .linksBar{
-      height: 100%;
-      display: flex;
-      justify-content: flex-end;    
-      align-items: center;  
-  }
+.navbar {
+  grid-area: navbar;
+  background-color: #b20000;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
 
-  .linkBar{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 200px;
-  }
+.logo {
+  background-image: url(/images/logocrosspage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 30px;
+  top: 5px;
+  animation: fadeInDown;
+  animation-duration: 1.5s;
+}
 
-  a .linkBar{
-      text-decoration: none;
-      height: inherit;
-      width: inherit;
-  }
+.linksBar {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+.linkBar1 {
+  animation: slideInDown;
+  animation-duration: 2s;
+}
 
-  .linksBar a{
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.2em;
-      font-family: 'molot';
-  }
+.linkBar2 {
+  animation: slideInDown;
+  animation-duration: 2.5s;
+}
 
-  .linksBar a:hover{
-    background-color: #000000;
-    color: #b20000;
-    transition: color 0.2s ease-in-out;
+.linkBar3 {
+  animation: slideInDown;
+  animation-duration: 3s;
+}
+.linksBar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 200px;
+}
+
+a .linkBar {
+  text-decoration: none;
+  height: inherit;
+  width: inherit;
+}
+
+.linksBar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: "molot";
+}
+
+.linksBar a:hover {
+  background-color: #000000;
+  color: #b20000;
+  transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out;
 }
-  
-  .linea {
-    grid-area: linea;
-    background-color: #fff;
-    color: #b20000;
-    font-family: 'molot';
-    text-align: right;
-    word-spacing: 5px;
-    letter-spacing: 3px;
-  }
-  
-  .linea2 {
-    grid-area: linea2;
-    background-color: #fff;
-    color: #b20000;
-    font-family: 'molot';
-    text-align: center;
-    word-spacing: 5px;
-    letter-spacing: 3px;
-  }
 
-  .main {
-    grid-area: main;
-    height: 70vh;
-    background-image: url(/images/ban3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x:  center;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-  }
+.linea {
+  grid-area: linea;
+  background-color: #fff;
+  color: #b20000;
+  font-family: "molot";
+  text-align: right;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+}
 
-  .conta{
-      position: relative;
-      right: 500px;
-      height: 300px;
-      width: 300px;
-      background-color: #b2000080;
-  }
+.linea2 {
+  grid-area: linea2;
+  background-color: #fff;
+  color: #b20000;
+  font-family: "molot";
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+}
 
-  .contb{
-      position: relative;
-      left: 20px;
-      top: 20px;
-      height: 300px;
-      width: 300px;
-      background-color: #000000;
-      color: white;
-      font-family: molot;
-      letter-spacing: 2px;
-      word-spacing: 5px;
-  }
-  
-  .footer {
-    grid-area: footer;
-  }
+.main {
+  grid-area: main;
+  height: 70vh;
+  background-image: url(/images/ban3.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn;
+  animation-duration: 4s;
+}
+
+.conta {
+  position: relative;
+  right: 500px;
+  height: 300px;
+  width: 300px;
+  background-color: #b2000080;
+}
+
+.contb {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  height: 300px;
+  width: 300px;
+  background-color: #000000;
+  color: white;
+  font-family: molot;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+.footer {
+  grid-area: footer;
+}
