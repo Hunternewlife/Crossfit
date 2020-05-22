@@ -58,6 +58,21 @@
       align-items: center;  
   }
 
+  .linksBar li{
+    height: inherit;
+    list-style: none;
+  }
+
+  .linkBar li a{
+    background-color: #000000;
+    padding: 10px 0;
+    display: block;
+  }
+
+  .boxdepleglable{
+    display: none;
+  }
+
   .linkBar{
       display: flex;
       justify-content: center;
@@ -65,6 +80,7 @@
       height: 100%;
       width: 200px;
   }
+
 
   a .linkBar{
       text-decoration: none;
@@ -87,7 +103,7 @@
   -moz-transition: color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out;
 }
-  
+
   .linea {
     grid-area: linea;
     background-color: #fff;
@@ -103,7 +119,7 @@
     background-color: #fff;
     color: #b20000;
     font-family: 'molot';
-    text-align: center;
+    text-align: left;
     word-spacing: 5px;
     letter-spacing: 3px;
   }
@@ -143,4 +159,98 @@
   
   .footer {
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contacto{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-image: url(/images/danger.png);
+    height: 10vh;
+  }
+
+  .danger{
+    background-image: url(/images/danger.png);
+    height: inherit;
+    width: 85%;
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+
+  .formulario{
+   background-color: #000000;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .correo{
+    width: 211px;
+  }
+
+
+  .btn{
+    width: 211px;
+    border-radius: 3px;
+    background-color: #b20000;
+    color: white;
+    border: #000000 1px solid;
+  }
+
+  .varios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'redes',
+    'maps',
+    'llamanos'
+    ;
+    height: 10vh;
+    background-color: black;
+    color: #fff;
+    font-family: molot;
+  }
+
+  .redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    flex-direction: column;
+    letter-spacing: 1px;
+    border-right: #b20000 1px solid;
+    
+  }
+
+  .redes .fab{
+    font-size: 1.4em;
+    color: #ffffff;
+    
+  }
+
+  .maps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-right: #b20000 1px solid;
+  }
+
+  .llamanos{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+  .drop{
+    position: relative;
+    
   }

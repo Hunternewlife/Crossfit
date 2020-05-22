@@ -11,11 +11,25 @@
     <header>
         <div class="navbar">
             <div class="logo">  </div>
-            <nav class="linksBar">
-                <a class="linkBar" href="#">Nuestro Box</a>
-                <a class="linkBar" href="#">Nutricion</a>
-                <a class="linkBar" href="#">Crosfit?</a>
-            </nav>
+            <ul class="linksBar">
+                <li><a class="linkBar" id="btn1" href="#">Nuestro Box</a>
+                    <ul class="boxdepleglable" id="box1">
+                        <a class="linkBar"  href="#">Quienes somos</a>
+                        <a class="linkBar" href="#">Instalaciones</a>
+                        <a class="linkBar" href="#">Servicios</a>
+                        <a class="linkBar" href="#">Galeria</a>
+                    </ul>
+                </li>
+                <li><a class="linkBar" href="#">Nutricion</a></li>
+                <li><a class="linkBar" href="#">Crosfit</a>
+                    <ul class="boxdepleglable" >
+                        <a class="linkBar" href="#">Que es Crosfit</a>
+                        <a class="linkBar" href="#">Jerga Crosfit</a>
+                        <a class="linkBar" href="#">FAQ</a>
+                        <a class="linkBar" href="#">Links</a>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="linea">
             <p>El mejor box de colombia</p>
@@ -24,14 +38,40 @@
             <div class="conta">
                 <div class="contb">
                     <h1>El dolor es temporal, pero el orgullo ese es para siempre</h1>
-                    
                 </div>
             </div>
         </div>
         <div class="linea2">
-            <p>a</p>
+            <p>Hubicados en Zipaquira</p>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="contacto"> 
+                <div class="danger"></div>                
+               <div class="formulario">
+                    <h2>Mas informacion?</h2>
+                    <h2> dejanos tu email</h2>
+                    <input type="text" class="correo">
+                    <input type="submit" value="recibir info" class="btn">
+               </div>
+            </div>
+            <div class="varios">
+                <div class="redes">
+                    <h1>Nuestras redes</h1>
+                    <div>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                        <a href=""><i class="fab fa-instagram-square"></i></div></a>
+                     </div>
+                <div class="maps"> <img src="/images/encont.png" alt="" srcset=""> </div>
+                <div class="llamanos"> 
+                    <form action="">
+                        <a> Contacto</a>
+                        <a> 310 218 2024</a>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright"></div>
+        </div>
     </header>
 </body>
 <script src="/scripts/scripts.js"></script>
