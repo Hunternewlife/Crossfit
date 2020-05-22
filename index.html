@@ -24,21 +24,48 @@
           <a class="linkBar3" href="#">Crosfit?</a>
         </nav>
       </div>
+    </header>
+    <div class="content">
       <div class="linea">
         <p>El mejor box de colombia</p>
       </div>
-      <div class="main" id="main">
-        <div class="conta">
+      <div class="main">
+        <div class="video">
+          <video autoplay muted loop id="videoBanner">
+            <source src="images/crossfitBanner.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- <div class="conta">
           <div class="contb">
             <h1>EL DOLOR ES TEMPORAL, LA GANANCIA ES PARA SIEMPRE.</h1>
-          </div>
-        </div>
+          </div> -->
       </div>
       <div class="linea2">
         <p>a</p>
       </div>
-      <div class="footer"></div>
-    </header>
+      <div class="footer">
+        <div id="map"></div>
+      </div>
+    </div>
   </body>
   <script src="/scripts/scripts.js"></script>
+  <script>
+    function iniciarMapa() {
+      let locacion = { lat: 5.02521, lng: -74.00148 };
+      let map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: locacion,
+      });
+      let marcador = new google.maps.Marker({
+        position: locacion,
+        map: map,
+      });
+    }
+  </script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD5jRhq2JxJHYGpCvkkzau-IBQQrJpax8&callback=iniciarMapa"
+  ></script>
 </html>

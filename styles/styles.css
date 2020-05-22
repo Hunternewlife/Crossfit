@@ -25,7 +25,7 @@ body {
   margin: 0vh 12vh;
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr 0.4fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr auto;
   grid-template-areas:
     "  navbar "
     " linea "
@@ -40,6 +40,13 @@ body {
   height: 10vh;
   display: grid;
   grid-template-columns: 0.2fr 1fr;
+  animation: slideInDown;
+  animation-duration: 1s;
+}
+
+.content {
+  animation: fadeIn;
+  animation-duration: 3s;
 }
 
 .logo {
@@ -126,17 +133,22 @@ a .linkBar {
 .main {
   grid-area: main;
   height: 70vh;
-  background-image: url(/images/ban3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
+  /* background-image: url(/images/crossfitBanner.mp4); */
+  /* background-size: contain;
+  background-position-x: center; */
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn;
-  animation-duration: 4s;
 }
 
+.video {
+  overflow: hidden;
+}
+
+#videoBanner {
+  height: 69.5vh !important;
+}
+/* 
 .conta {
   position: relative;
   right: 500px;
@@ -156,8 +168,13 @@ a .linkBar {
   font-family: molot;
   letter-spacing: 2px;
   word-spacing: 5px;
-}
+} */
 
 .footer {
   grid-area: footer;
+}
+
+#map {
+  height: 15vh;
+  width: 30%;
 }
