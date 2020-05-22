@@ -44,6 +44,19 @@
             <p>El mejor box de colombia</p>
         </div>
         <div class="main" id="main">
+          <div class="video">
+          <video
+            autoplay
+            muted
+            loop
+            id="videoBanner"
+            width="100%"
+            height="100%"
+          >
+            <source src="images/crossfitBanner.mp4" type="video/mp4" />
+          </video>
+        </div>
+
             <div class="conta">
                 <div class="contb">
                     <h1>El dolor es temporal, pero el orgullo ese es para siempre</h1>
@@ -71,7 +84,7 @@
                         <a href=""><i class="fab fa-facebook-square"></i></a>
                         <a href=""><i class="fab fa-instagram-square"></i></div></a>
                      </div>
-                <div class="maps"> <img src="/images/encont.png" alt="" srcset=""> </div>
+                 <div id="map"></div>
                 <div class="llamanos"> 
                     <form action="">
                         <a> Contacto</a>
@@ -83,4 +96,22 @@
         </div>
   </body>
   <script src="/scripts/scripts.js"></script>
+  <script>
+    function iniciarMapa() {
+      let locacion = { lat: 5.02521, lng: -74.00148 };
+      let map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: locacion,
+      });
+      let marcador = new google.maps.Marker({
+        position: locacion,
+        map: map,
+      });
+    }
+  </script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD5jRhq2JxJHYGpCvkkzau-IBQQrJpax8&callback=iniciarMapa"
+  ></script>
 </html>
