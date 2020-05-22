@@ -43,12 +43,12 @@
   }
 
   .logo{
-      background-image: url(/images/logocrosspage.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: relative;
-      left: 30px;
-      top: 5px;
+    animation: fadeInDown;
+    animation-duration: 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
   }
 
   .linksBar{
@@ -59,18 +59,35 @@
   }
 
   .linksBar li{
-    height: inherit;
+    height: 10VH;
     list-style: none;
+    
   }
+
+  .linksBar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'molot';
+    
+}
+
+  .linksBar a:hover{
+    background-color: #000000;
+    color: #b20000;
+    transition: color 0.2s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
 
   .linkBar li a{
     background-color: #000000;
-    padding: 10px 0;
     display: block;
   }
 
   .boxdepleglable{
     display: none;
+    background-color: #000000;
   }
 
   .linkBar{
@@ -81,75 +98,16 @@
       width: 200px;
   }
 
+  li ul a{
+    background-color: #000000;
+    height: 150px;
+  }
 
   a .linkBar{
       text-decoration: none;
       height: inherit;
       width: inherit;
   }
-
-
-  .linksBar a{
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.2em;
-      font-family: 'molot';
-  }
-
-  .linksBar a:hover{
-    background-color: #000000;
-    color: #b20000;
-    transition: color 0.2s ease-in-out;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  background-image: url(/images/fondoNegro1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-body {
-  background-color: #000000;
-  display: grid;
-  margin: 0vh 12vh;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr 0.4fr;
-  grid-template-areas:
-    "  navbar "
-    " linea "
-    " main "
-    " linea2 "
-    " footer ";
-}
-
-.navbar {
-  grid-area: navbar;
-  background-color: #b20000;
-  height: 10vh;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr;
-}
-
-.logo {
-  background-image: url(/images/logocrosspage.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  left: 30px;
-  top: 5px;
-  animation: fadeInDown;
-  animation-duration: 1.5s;
-}
-
-.linksBar {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 .linkBar1 {
   animation: slideInDown;
@@ -165,6 +123,7 @@ body {
   animation: slideInDown;
   animation-duration: 3s;
 }
+
 .linksBar a {
   display: flex;
   justify-content: center;
